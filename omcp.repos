@@ -1,0 +1,4 @@
+repositories:
+  ar3_ros:
+    type: git
+    url: https://github.com/emanuelbuholzer/ar3_ros.git
