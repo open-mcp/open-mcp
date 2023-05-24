@@ -2,6 +2,9 @@ ARG ROS_DISTRO="humble"
 
 FROM docker.io/ros:${ROS_DISTRO}
 
+# See https://github.com/opencontainers/runc/issues/2517
+RUN echo 'APT::Sandbox::User "root";' > /etc/apt/apt.conf.d/sandbox-disable
+
 ENV ROS_OVERLAY /opt/ros/omcp
 
 WORKDIR $ROS_OVERLAY
