@@ -1,4 +1,7 @@
 repositories:
   ar3_ros:
     type: git
-    url: https://github.com/emanuelbuholzer/ar3_ros.git
+    url: https://github.com/RIF-Robotics/ar3_ros.git
+  ar3_moveit2_config:
+    type: git
+    url: https://github.com/RIF-Robotics/ar3_moveit2_config.git
