@@ -39,10 +39,42 @@ sudo apt upgrade
 Install ROS 2 Humble Hawksbill Desktop and development tools.
 ```bash 
 sudo apt install -y ros-humble-desktop ros-dev-tools
-echo -e "\n# ROS 2 Humble Hawksbill\nsource /opt/ros/humble/setup.bash" >> ~/.bashrc && source ~/.bashrc
+echo -e "\n# ROS 2 Humble Hawksbill\nsource /opt/ros/humble/setup.bash" >> ~/.bashrc && source /opt/ros/humble/setup.bash
 ```
 
 Verify that you've successfully installed ROS 2 Humble Hawksbill:
 ```bash
 ros2 doctor --report
+```
+
+## Installation
+
+In order to install omcp its recommended to build omcp and it's packages from source.
+
+Create a new workspace for omcp:
+```bash
+sudo mkdir -p ~/omcp/src
+cd ~/omcp
+```
+
+Import the sources for omcp's packages:
+```bash
+vcs import --input https://raw.githubusercontent.com/emanuelbuholzer/omcp/main/omcp.repos src
+```
+
+Initialize rosdep and update its caches:
+```bash
+sudo rosdep init > /dev/null
+rosdep update
+```
+
+Install omcp's dependencies and build omcp:
+```bash
+rosdep install -iy --from-paths src
+colcon build --symlink-install
+```
+
+Install omcp for the current user:
+```bash
+echo -e "\n# omcp\nsource ~/omcp/install/setup.bash" && source ~/omcp/install/setup.bash
 ```
