@@ -53,7 +53,7 @@ In order to install omcp its recommended to build omcp and it's packages from so
 
 Create a new workspace for omcp:
 ```bash
-sudo mkdir -p ~/omcp/src
+mkdir -p ~/omcp/src
 cd ~/omcp
 ```
 
@@ -76,5 +76,5 @@ colcon build --symlink-install
 
 Install omcp for the current user:
 ```bash
-echo -e "\n# omcp\nsource ~/omcp/install/setup.bash" && source ~/omcp/install/setup.bash
+echo -e "\n# omcp\nsource ~/omcp/install/setup.bash" >> ~/.bashrc && source ~/omcp/install/setup.bash
 ```
