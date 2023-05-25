@@ -25,7 +25,7 @@ sudo add-apt-repository universe
 
 Add the ROS 2 repository:
 ```bash
-sudo apt update && sudo apt install curl -y
+sudo apt update && sudo apt install -y curl
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 ```
@@ -38,6 +38,11 @@ sudo apt upgrade
 
 Install ROS 2 Humble Hawksbill Desktop and development tools.
 ```bash 
-sudo apt install ros-humble-desktop
-sudo apt install ros-dev-tools
+sudo apt install -y ros-humble-desktop ros-dev-tools
+echo -e "\n# ROS 2 Humble Hawksbill\nsource /opt/ros/humble/setup.bash" >> ~/.bashrc && source ~/.bashrc
+```
+
+Verify that you've successfully installed ROS 2 Humble Hawksbill:
+```bash
+ros2 doctor --report
 ```
