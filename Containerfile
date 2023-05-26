@@ -20,6 +20,10 @@ RUN apt-get update && \
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
     colcon build
 
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
+    colcon test ; \
+    colcon test-result --verbose
+
 RUN sed --in-place --expression \
     '$isource "${ROS_OVERLAY}/install/setup.bash"' \
     /ros_entrypoint.sh
