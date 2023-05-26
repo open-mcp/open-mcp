@@ -20,6 +20,7 @@ The hardware driver in use is custom from the original AR3 teensy sketch and nee
 
 In order to program the teensy you need Teensyduino and the Arduino IDE:
 ```bash
+pushd ~
 curl -O https://downloads.arduino.cc/arduino-1.8.15-linux64.tar.xz
 curl -O https://www.pjrc.com/teensy/td_154/TeensyduinoInstall.linux64
 tar -xf arduino-1.8.15-linux64.tar.xz
@@ -30,7 +31,8 @@ chmod 755 TeensyduinoInstall.linux64
 With the Arduino IDE and Teensyduino installed, you can program your teensy.
 For this open the Arduino IDE with the `ar3_teensy_v2.ino` sketch:
 ```bash
-./arduino-1.8.15/arduino ~/omcp/src/ar3_ros/ar3_embedded/ar3_teensy_v2/ar2_teensy_v2.ino
+~/arduino-1.8.15/arduino ~/omcp/src/ar3_ros/ar3_embedded/ar3_teensy_v2/ar3_teensy_v2.ino
+popd
 ```
 
 Press upload and program your teensy!
