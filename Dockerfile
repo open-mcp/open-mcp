@@ -9,12 +9,6 @@ ENV ROS_OVERLAY /opt/ros/omcp
 
 WORKDIR $ROS_OVERLAY
 
-# Workaround for https://github.com/emanuelbuholzer/omcp_blender/issues/1
-RUN apt-get update &&  \
-    apt-get install -y python3-pip &&  \
-    python3 -m pip install pytest-blender && \
-    rm -rf /var/lib/apt/lists/
-
 COPY omcp.repos omcp.repos
 RUN mkdir src && \
     vcs import --input omcp.repos src
