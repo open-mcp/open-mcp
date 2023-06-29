@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="omcp_blender: Build image" type="ShConfigurationType" folderName="omcp_blender" activateToolWindowBeforeRun="false">
+  <configuration default="false" name="ar3_ros: Launch AR3 MoveIt2" type="ShConfigurationType">
     <option name="SCRIPT_TEXT" value="" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/../scripts/omcp_blender/build_image.sh" />
+    <option name="SCRIPT_PATH" value="$PROJECT_DIR$/../scripts/ar3_ros/launch_moveit2.sh" />
     <option name="SCRIPT_OPTIONS" value="" />
     <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
     <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
@@ -12,6 +12,8 @@
     <option name="EXECUTE_IN_TERMINAL" value="false" />
     <option name="EXECUTE_SCRIPT_FILE" value="true" />
     <envs />
-    <method v="2" />
+    <method v="2">
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build workspace" run_configuration_type="ShConfigurationType" />
+    </method>
   </configuration>
 </component>
