@@ -8,6 +8,9 @@ repositories:
   omcp_blender:
     type: git
     url: https://github.com/emanuelbuholzer/omcp_blender.git
+  omcp_blender_ar3:
+    type: git
+    url: https://github.com/emanuelbuholzer/omcp_blender_ar3.git
   ros2_blender:
     type: git
     url: https://github.com/emanuelbuholzer/ros2_blender.git
