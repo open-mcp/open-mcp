@@ -5,9 +5,9 @@ repositories:
   ar3_moveit2_config:
     type: git
     url: https://github.com/RIF-Robotics/ar3_moveit2_config.git
-  omcp_blender:
+  open-mcp-blender:
     type: git
-    url: https://github.com/emanuelbuholzer/omcp_blender.git
+    url: https://github.com/open-mcp/open-mcp-blender.git
   omcp_blender_ar3:
     type: git
     url: https://github.com/emanuelbuholzer/omcp_blender_ar3.git
