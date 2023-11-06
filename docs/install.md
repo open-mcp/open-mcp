@@ -1,8 +1,8 @@
-# Installing omcp
+# Installing open-mcp
 
 ## System requirements
 
-In order to run omcp, you will need a Ubuntu 22.04.02 LTS (Jammy Jellyfish) with ROS 2 Humble Hawksbill and its development tools installed.
+In order to run open-mcp, you will need a Ubuntu 22.04.02 LTS (Jammy Jellyfish) with ROS 2 Humble Hawksbill and its development tools installed.
 It is generally recommended that you have at least 16GB of RAM and an something equivalent to a more or less recent Intel i7 or better.
 
 ### Installing Ubuntu Jammy
@@ -49,17 +49,17 @@ ros2 doctor --report
 
 ## Installation
 
-In order to install omcp its recommended to build omcp and it's packages from source.
+In order to install open-mcp its recommended to build open-mcp and it's packages from source.
 
-Create a new workspace for omcp:
+Create a new workspace for open-mcp:
 ```bash
-mkdir -p ~/omcp/src
-cd ~/omcp
+mkdir -p ~/open-mcp/src
+cd ~/open-mcp
 ```
 
 Import the sources for omcp's packages:
 ```bash
-vcs import --input https://raw.githubusercontent.com/emanuelbuholzer/omcp/main/omcp.repos src
+vcs import --input https://raw.githubusercontent.com/open-mcp/open-mcp/main/open-mcp.repos src
 ```
 
 Initialize rosdep and update its caches:
@@ -68,13 +68,13 @@ sudo rosdep init > /dev/null
 rosdep update
 ```
 
-Install omcp's dependencies and build omcp:
+Install open-mcp's dependencies and build open-mcp:
 ```bash
 rosdep install -iy --from-paths src
 colcon build --symlink-install
 ```
 
-Install omcp for the current user:
+Install open-mcp for the current user:
 ```bash
-echo -e "\n# omcp\nsource ~/omcp/install/setup.bash" >> ~/.bashrc && source ~/omcp/install/setup.bash
+echo -e "\n# open-mcp\nsource ~/open-mcp/install/setup.bash" >> ~/.bashrc && source ~/open-mcp/install/setup.bash
 ```

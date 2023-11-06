@@ -1,1 +1,1 @@
-# omcp: open motion control photography
+# open-mcp

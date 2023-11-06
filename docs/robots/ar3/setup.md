@@ -1,8 +1,8 @@
-# Setting up an AR3 for omcp
+# Setting up an AR3 for open-mcp
 
 ## Enabling serial communication
 
-In order to talk to the AR3 robot, omcp connects to the AR3's teensy board via USB.
+In order to talk to the AR3 robot, open-mcp connects to the AR3's teensy board via USB.
 
 To enable the serial communication with the teensy, you can install pjrc's udev rules:
 ```bash
@@ -13,10 +13,10 @@ sudo udevadm trigger
 
 ## Programming the teensy
 
-The teensy board provides a hardware driver to enable omcp to control the AR3.
+The teensy board provides a hardware driver to enable open-mcp to control the AR3.
 The hardware driver in use is custom from the original AR3 teensy sketch and needs to be programmed for the teensy.
 
-> Before continuing please ensure you've [installed omcp](docs/install.md), as it contains the custom teensy sketch.
+> Before continuing please ensure you've [installed open-mcp](docs/install.md), as it contains the custom teensy sketch.
 
 In order to program the teensy you need Teensyduino and the Arduino IDE:
 ```bash
@@ -31,7 +31,7 @@ chmod 755 TeensyduinoInstall.linux64
 With the Arduino IDE and Teensyduino installed, you can program your teensy.
 For this open the Arduino IDE with the `ar3_teensy_v2.ino` sketch:
 ```bash
-~/arduino-1.8.15/arduino ~/omcp/src/ar3_ros/ar3_embedded/ar3_teensy_v2/ar3_teensy_v2.ino
+~/arduino-1.8.15/arduino ~/open-mcp/src/ar3_ros/ar3_embedded/ar3_teensy_v2/ar3_teensy_v2.ino
 popd
 ```
 

@@ -5,13 +5,13 @@ FROM docker.io/ros:${ROS_DISTRO}
 # See https://github.com/opencontainers/runc/issues/2517
 RUN echo 'APT::Sandbox::User "root";' > /etc/apt/apt.conf.d/sandbox-disable
 
-ENV ROS_OVERLAY /opt/ros/omcp
+ENV ROS_OVERLAY /opt/ros/open-mcp
 
 WORKDIR $ROS_OVERLAY
 
-COPY omcp.repos omcp.repos
+COPY open-mcp.repos open-mcp.repos
 RUN mkdir src && \
-    vcs import --input omcp.repos src
+    vcs import --input open-mcp.repos src
 
 RUN apt-get update && \
     rosdep install -iy --from-paths src && \
