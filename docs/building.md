@@ -1,9 +1,9 @@
 ## Development enivornment
-You can develop open-mcp using a dedicated system or using containers.
 
-Since container images can be relatively big building them without layers and history might be a good option in case you're short on disk space. To do this you can build the container image by running:
+Create and enter your containerized workspace:
 ```bash
-podman build --layers=false --omit-history=true .
+distrobox create --image docker.io/ros:jazzy --name open-mcp
+distrobox enter open-mcp
 ```
 
 ## Build and test
@@ -12,7 +12,8 @@ In order to build the workspace, run:
 colcon build \
   --symlink-install \
   --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
-  --event-handlers desktop_notification-
+  --event-handlers desktop_notification- \
+  --continue-on-error
 ```
 
 In order to run the tests, run:
