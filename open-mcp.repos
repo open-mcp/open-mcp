@@ -1,4 +1,4 @@
 repositories:
   ros2_blender:
     type: git
-    url: https://github.com/emanuelbuholzer/ros2_blender.git
+    url: git@github.com:emanuelbuholzer/ros2_blender.git 
